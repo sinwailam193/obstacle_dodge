@@ -10,6 +10,10 @@ public class Mover : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        MovePlayer();
+    }
+
+    void MovePlayer() {
         // using Time.deltaTime to make the movement framerate independent
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0;
