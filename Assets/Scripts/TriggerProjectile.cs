@@ -5,7 +5,7 @@ public class TriggerProjectile : MonoBehaviour {
     GameObject dropper;
     GameObject spinner;
 
-    void Start() {
+    void Awake() {
         projectiles = GameObject.Find("Projectiles");
         projectiles.SetActive(false);
 
