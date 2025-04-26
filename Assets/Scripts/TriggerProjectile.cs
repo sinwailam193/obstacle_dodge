@@ -1,13 +1,13 @@
 using UnityEngine;
 
 public class TriggerProjectile : MonoBehaviour {
-    GameObject projectile;
+    GameObject projectiles;
     GameObject dropper;
     GameObject spinner;
 
     void Start() {
-        projectile = GameObject.Find("Flying Stuff");
-        projectile.SetActive(false);
+        projectiles = GameObject.Find("Projectiles");
+        projectiles.SetActive(false);
 
         dropper = GameObject.Find("Cube from Sky");
         dropper.SetActive(false);
@@ -18,7 +18,7 @@ public class TriggerProjectile : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
-            projectile.SetActive(true);
+            projectiles.SetActive(true);
             dropper.SetActive(true);
             spinner.SetActive(true);
         }
